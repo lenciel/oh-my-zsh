@@ -6,3 +6,5 @@ custom/*
 !custom/example.zsh
 cache
 *.swp
+dot_files_old/.aliases
+dot_files_old/.zshrc
