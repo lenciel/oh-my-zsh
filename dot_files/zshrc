@@ -29,3 +29,14 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 # Customize to your needs...
+PATH="/usr/local/bin:/usr/local/share/python:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin:/usr/local/android-sdk/tools/:/usr/local/android-sdk/platform-tools/:$PATH"
+# Vim style shell
+bindkey -v
+bindkey -M viins 'jj' vi-cmd-mode
+bindkey '^R' history-incremental-search-backward
+
+
+# Add virtualenvwrapper env parameter
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/share/python/virtualenvwrapper.sh
+

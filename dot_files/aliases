@@ -2,11 +2,14 @@ alias sudo='sudo '
 #(recognize the space!)
 
 alias ll="ls -Gla"
+alias vi="vim"
 alias rmf="rm -fr"
 alias psfg="ps -fea | grep"
 alias vi-auth="vim /etc/auth/auth.properties"
 alias vi-auth11="vim /etc/auth/auth.v1.1.properties"
 alias vi-auth20="vim /etc/auth/auth.v2.0.properties"
+alias p4merge="/Applications/p4merge.app/Contents/MacOS/p4merge"
+alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 #Tmux
 ## UTF-8 support
@@ -22,6 +25,8 @@ alias android-update="/usr/local/android-sdk/tools/android"
 
 #SSH
 alias sshu="ssh 10.15.5.134 -l lenciel"
-alias sshu="ssh 61.188.176.134 -l root"
+alias sshcent="ssh 61.188.176.134 -l root"
 
-#Just
+#Virtualenv
+alias mkvir="mkvirtualenv"
+alias rmvir="rmvirtualenv"

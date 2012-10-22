@@ -1,1 +1,2 @@
-colorscheme desert
+colorscheme ir_black
+let g:pymode = 1
