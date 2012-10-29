@@ -24,7 +24,7 @@ alias mountAndroid="hdiutil attach ~/Lenciel/Images/Android.sparseimage -mountpo
 alias android-update="/usr/local/android-sdk/tools/android"
 
 #SSH
-alias sshu="ssh 10.15.5.134 -l lenciel"
+alias sshu="ssh um"
 alias sshcent="ssh 61.188.176.134 -l root"
 
 #Virtualenv

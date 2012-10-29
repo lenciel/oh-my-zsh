@@ -1,2 +1,8 @@
 colorscheme ir_black
-let g:pymode = 1
+
+"let g:pymode_lint = 0
+"let g:pymode_doc = 1
+"let g:pymode_rope = 0
+
+
+map <leader>gcc :w<CR> :!clear<CR> :!gcc % -o %< && ./%< <CR>
