@@ -1,6 +1,3 @@
-alias sudo='sudo '
-#(recognize the space!)
-
 alias ll="ls -Gla"
 alias vi="vim"
 alias rmf="rm -fr"
@@ -12,12 +9,8 @@ alias p4merge="/Applications/p4merge.app/Contents/MacOS/p4merge"
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 #Tmux
-## UTF-8 support
-alias t="tmux -u"
-## Attach a session ##
-alias tat="tmux attach -t"
-## Create a session ##
-alias tns="tmux new-session -s"
+## start alien64 configuration
+alias tu="tmuxinator alien64"
 
 #Android
 alias mountAndroid="hdiutil attach ~/Lenciel/Images/Android.sparseimage -mountpoint /Volumes/android"
@@ -30,3 +23,10 @@ alias sshcent="ssh 61.188.176.134 -l root"
 #Virtualenv
 alias mkvir="mkvirtualenv"
 alias rmvir="rmvirtualenv"
+
+#Fix sudo
+alias sudo='nocorrect sudo'
+alias startmy='sudo /usr/local/bin/mysqld_safe &'
+alias stopmy='sudo /usr/local/bin/mysqladmin shutdown'
+
+#Useful CMD

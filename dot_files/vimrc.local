@@ -5,4 +5,5 @@ colorscheme ir_black
 "let g:pymode_rope = 0
 
 
-map <leader>gcc :w<CR> :!clear<CR> :!gcc % -o %< && ./%< <CR>
+map <leader>g+ :w<CR> :!clear<CR> :!g++ % -o %< && ./%< <CR>
+set clipboard=unnamed
