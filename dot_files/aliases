@@ -15,6 +15,7 @@ alias tu="tmuxinator alien64"
 #Android
 alias mountAndroid="hdiutil attach ~/Lenciel/Images/Android.sparseimage -mountpoint /Volumes/android"
 alias android-update="/usr/local/android-sdk/tools/android"
+alias apkd="~/bin/apk2g/apk2gold"
 
 #SSH
 alias sshu="ssh um"
