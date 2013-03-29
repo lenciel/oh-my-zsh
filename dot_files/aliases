@@ -31,3 +31,4 @@ alias startmy='sudo /usr/local/bin/mysqld_safe &'
 alias stopmy='sudo /usr/local/bin/mysqladmin shutdown'
 
 #Useful CMD
+alias f='open -a Finder ./'

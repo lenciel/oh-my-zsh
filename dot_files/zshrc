@@ -29,7 +29,17 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 # Customize to your needs...
-PATH="$HOME/.rbenv/bin://usr/local/bin:usr/local/share/python:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin:/usr/local/android-sdk/tools:/usr/local/android-sdk/platform-tools:$PATH"
+PATH="$HOME/.rbenv/bin:/usr/local/bin:usr/local/share/python:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin:/usr/local/android-sdk/tools:/usr/local/android-sdk/platform-tools:$PATH"
+
+cdf() {
+    target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
+    if [ "$target" != "" ]; then
+        cd "$target"; pwd
+    else
+        echo 'No Finder window found' >&2
+    fi
+}
+
 # Vim style shell
 bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
@@ -37,8 +47,11 @@ bindkey '^R' history-incremental-search-backward
 
 
 # Add virtualenvwrapper env parameter
+export VIRTUALENV_DISTRIBUTE=true
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/share/python/virtualenvwrapper.sh
 
 eval "$(rbenv init -)"
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
 alias b='bundle exec'
