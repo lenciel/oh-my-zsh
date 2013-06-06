@@ -1,1 +1,129 @@
+#PATH
+
+PATH="/usr/local/bin:usr/local/share/python:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin:/opt/boxen/rbenv/bin:$PATH"
+
+##Functions##
+
+cdf() {
+    target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
+    if [ "$target" != "" ]; then
+        cd "$target"; pwd
+    else
+        echo 'No Finder window found' >&2
+    fi
+}
+
+dls () {
+ # directory LS
+ echo `ls -l | grep "^d" | awk '{ print $9 }' | tr -d "/"`
+}
+
+dgrep() {
+    # A recursive, case-insensitive grep that excludes binary files
+    grep -iR "$@" * | grep -v "Binary"
+}
+
+dfgrep() {
+    # A recursive, case-insensitive grep that excludes binary files
+    # and returns only unique filenames
+    grep -iR "$@" * | grep -v "Binary" | sed 's/:/ /g' | awk '{ print $1 }' | sort | uniq
+}
+
+psgrep() {
+    if [ ! -z $1 ] ; then
+        echo "Grepping for processes matching $1..."
+        ps aux | grep $1 | grep -v grep
+    else
+        echo "!! Need name to grep for"
+    fi
+}
+
+# run command and show result in vim for editing
 vimcmd() { $1 > $2 && vim $2; }
+
+# copy auth key
+add_auth_key () {
+    ssh-copy-id $@
+}
+
+extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)        tar xjf $1        ;;
+            *.tar.gz)         tar xzf $1        ;;
+            *.bz2)            bunzip2 $1        ;;
+            *.rar)            unrar x $1        ;;
+            *.gz)             gunzip $1         ;;
+            *.tar)            tar xf $1         ;;
+            *.tbz2)           tar xjf $1        ;;
+            *.tgz)            tar xzf $1        ;;
+            *.zip)            unzip $1          ;;
+            *.Z)              uncompress $1     ;;
+            *)                echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+killit() {
+    # Kills any process that matches a regexp passed to it
+    ps aux | grep -v "grep" | grep "$@" | awk '{print $2}' | xargs sudo kill
+}
+
+# if cannot find tree then build a command
+tree () {
+  find $@ -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+}
+
+mcd () {
+    mkdir "$@" && cd "$@"
+}
+
+# zip directory to /tmp and bcp it
+bcpdir() {
+
+    curr_time=`date +%s`
+    file=/tmp/files_$curr_time.zip
+
+    if [[ -d $1 ]]; then
+
+        # dir   
+        cd $1
+        zip -r -9 $2 $file .
+
+    elif [[ -f $1 ]]; then
+
+        # single file
+        file_dir=`dirname $1`
+        file_name=`basename $1`
+        cd $file_dir
+        zip -r -9 $2 $file $file_name
+
+    else
+        echo "$1 is not valid!"
+        exit 1  
+    fi
+
+    bcp $file
+    rm $file
+    cd -
+}
+# Vim style shell
+bindkey -v
+bindkey -M viins 'jj' vi-cmd-mode
+bindkey '^R' history-incremental-search-backward
+
+
+# Add virtualenvwrapper env parameter
+export VIRTUALENV_DISTRIBUTE=true
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
+# For octopress
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# For boxen
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+

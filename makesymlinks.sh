@@ -1,7 +1,7 @@
 #!/bin/bash
 ############################
 # .make.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dot_files
+# This script creates symlinks from the home directory to any desired dotfiles in ~/.oh-my-zsh/dot_files
 ############################
 
 ########## Variables
