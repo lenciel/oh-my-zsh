@@ -1,9 +1,16 @@
 colorscheme ir_black
-
 "let g:pymode_lint = 0
 "let g:pymode_doc = 1
 "let g:pymode_rope = 0
 
+" noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>"
 
 map <leader>g+ :w<CR> :!clear<CR> :!g++ % -o %< && ./%< <CR>
 set clipboard=unnamed
+
+" Yank text to the OS X clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
