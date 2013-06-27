@@ -66,6 +66,8 @@ alias apkd="~/bin/apk2g/apk2gold"
 # SSH
 alias sshu="ssh um"
 alias sshcent="ssh 61.188.176.134 -l root"
+alias sshec2="ssh -i ~/SkyDrive/Backup/cs184.pem ubuntu@ec2-54-218-32-94.us-west-2.compute.amazonaws.com"
+
 
 # Virtualenv
 alias mkvir="mkvirtualenv"
