@@ -113,6 +113,7 @@ bcpdir() {
     rm $file
     cd -
 }
+
 # Vim style shell
 bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
