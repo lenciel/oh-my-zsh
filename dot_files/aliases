@@ -75,6 +75,6 @@ alias rmvir="rmvirtualenv"
 
 # Octopress
 
-alias rd='rake deploy'
+alias rd='rake gen_deploy'
 alias rp='rake preview'
-alias rg='rake generate'
+alias sup='git push origin source'
