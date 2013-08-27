@@ -78,3 +78,6 @@ alias rmvir="rmvirtualenv"
 alias rd='rake gen_deploy'
 alias rp='rake preview'
 alias sup='git push origin source'
+
+# Mou
+alias mou="open -a Mou.app"

@@ -1,6 +1,6 @@
 #PATH
 
-PATH="/Users/lenciel/Library/Python/2.7/bin:/usr/local/bin:usr/local/share/python:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin:$PATH"
+PATH="/Users/lenciel/adt-bundle-mac/sdk/tools:/Users/lenciel/adt-bundle-mac/sdk/platform-tools/:/Users/lenciel/Library/Python/2.7/bin:/usr/local/bin:usr/local/share/python:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin:$PATH"
 
 if [ "`uname`" = "Darwin" ]; then
     compctl -f -x 'p[2]' -s "`/bin/ls -d1 /Applications/*/*.app  /Applications/*.app | sed 's|^.*/\([^/]*\)\.app.*|\\1|;s/ /\\\\ /g'`" -- open
