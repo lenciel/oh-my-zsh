@@ -64,10 +64,7 @@ alias tu="tmuxinator alien64"
 alias apkd="~/bin/apk2g/apk2gold"
 
 # SSH
-alias sshu="ssh um"
-alias sshcent="ssh 61.188.176.134 -l root"
-alias sshec2="ssh -i ~/SkyDrive/Backup/cs184.pem ubuntu@ec2-54-218-32-94.us-west-2.compute.amazonaws.com"
-
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=&gt; Public key copied to pasteboard.\n'";
 
 # Virtualenv
 alias mkvir="mkvirtualenv"
@@ -81,3 +78,6 @@ alias sup='git push origin source'
 
 # Mou
 alias mou="open -a Mou.app"
+
+# Speedtest
+alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'

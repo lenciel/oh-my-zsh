@@ -92,7 +92,7 @@ bcpdir() {
 
     if [[ -d $1 ]]; then
 
-        # dir   
+        # dir
         cd $1
         zip -r -9 $2 $file .
 
@@ -106,7 +106,7 @@ bcpdir() {
 
     else
         echo "$1 is not valid!"
-        exit 1  
+        exit 1
     fi
 
     bcp $file
@@ -122,9 +122,12 @@ bindkey '^S' history-incremental-search-forward
 bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
 
+# For Node
+# export NODE_PATH = "/usr/local/lib/node"
 
 # Add virtualenvwrapper env parameter
 export VIRTUALENV_DISTRIBUTE=true
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
@@ -141,3 +144,28 @@ export LANG=en_US.UTF-8
 # For tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 export EDITOR='vim'
+source /opt/boxen/homebrew/opt/autoenv/activate.sh
+# The use_env call below is a reusable command to activate/create a new Python
+# virtualenv, requiring only a single declarative line of code in your .env files.
+# It only performs an action if the requested virtualenv is not the current one.
+use_env() {
+  typeset venv
+  venv="$1"
+  if [[ `basename "${VIRTUAL_ENV:t}"` != "$venv" ]]; then
+    if workon | grep $venv > /dev/null; then
+      workon "$venv"
+    else
+      echo -n "Create virtualenv $venv now? (Yn) "
+      read answer
+      if [[ "$answer" == "Y" ]]; then
+        mkvirtualenv "$venv"
+      fi
+    fi
+  fi
+}
+
+#pip download cache
+export PIP_DOWNLOAD_CACHE=~/.pip-download-cache
+
+# tmuxinator completion
+source ~/.bin/tmuxinator.zsh
