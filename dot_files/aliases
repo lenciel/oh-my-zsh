@@ -40,7 +40,8 @@ alias hgo='hg outgoing'
 
 # Tmux
 ## start alien64 configuration
-alias tu="tmuxinator alien64"
+alias mblog="mux blog"
+alias magent="mux goagent"
 
 # Android
 alias apkd="~/bin/apk2g/apk2gold"
