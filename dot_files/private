@@ -115,12 +115,35 @@ bcpdir() {
 }
 
 # Vim style shell
+
 bindkey -v
-bindkey -M viins 'jj' vi-cmd-mode
-bindkey '^R' history-incremental-search-backward
-bindkey '^S' history-incremental-search-forward
-bindkey '^P' history-search-backward
-bindkey '^N' history-search-forward
+
+# Use vim cli mode
+bindkey '^P' up-history
+bindkey '^N' down-history
+
+# backspace and ^h working even after
+# # returning from command mode
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+
+# ctrl-w removed word backwards
+bindkey '^w' backward-kill-word
+
+# ctrl-r starts searching history backward
+bindkey '^r' history-incremental-search-backward
+
+#show mode in prompt
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
+
 
 # For Node
 # export NODE_PATH = "/usr/local/lib/node"
