@@ -50,6 +50,12 @@ add_auth_key () {
     ssh-copy-id $@
 }
 
+fuck() {
+    if killall -9 "$2"; then
+        echo ; echo " (ノಠ-ಠ)ノ ︵$(echo "$2"|toilet -f term -F rotate)"; echo
+    fi
+}
+
 extract () {
     if [ -f $1 ] ; then
         case $1 in
