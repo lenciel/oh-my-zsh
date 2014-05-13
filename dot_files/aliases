@@ -55,3 +55,4 @@ alias mou="open -a Mou.app"
 # Speedtest
 alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 alias pserve='python -m SimpleHTTPServer'
+
