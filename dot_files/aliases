@@ -57,3 +57,6 @@ alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 alias pserve='python -m SimpleHTTPServer'
 
 alias t='trash'
+alias bb='autossh -M 20000 -f -i ~/.ssh/fuckgfw -N -L 0.0.0.0:3189:localhost:31280 bee@o.badbee.cc'
+alias br='autossh -M 20000 -f -i ~/.ssh/fuckgfw -N -L 0.0.0.0:3189:localhost:31280 bee@r.badbee.cc'
+alias bv='autossh -M 20000 -f -i ~/.ssh/fuckgfw -N -L 0.0.0.0:3189:localhost:31280 bee@vl.badbee.cc'
