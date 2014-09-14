@@ -60,3 +60,11 @@ alias t='trash'
 alias bb='autossh -M 20000 -f -i ~/.ssh/fuckgfw -N -L 0.0.0.0:3189:localhost:31280 bee@o.badbee.cc'
 alias br='autossh -M 20000 -f -i ~/.ssh/fuckgfw -N -L 0.0.0.0:3189:localhost:31280 bee@r.badbee.cc'
 alias bv='autossh -M 20000 -f -i ~/.ssh/fuckgfw -N -L 0.0.0.0:3189:localhost:31280 bee@vl.badbee.cc'
+alias bj='autossh -M 20000 -f -i ~/.ssh/fuckgfw -N -L 0.0.0.0:3189:localhost:31280 bee@vj.badbee.cc'
+
+# post-review
+alias pr='post-review -g -o --target-groups "zoom_xerus" --target-people "caixu, lethe3000"'
+
+# local tunnel
+alias lt='/opt/boxen/nodenv/versions/v0.10.21/bin/lt'
+alias ngyawp='ngrok -authtoken 1kCPTQ4hqOf2vbxpgkc2  -subdomain=yawp-lenciel 8000'
