@@ -11,5 +11,7 @@ else
   alias heroku='nocorrect heroku'
   alias ebuild='nocorrect ebuild'
   alias hpodder='nocorrect hpodder'
+  alias grunt='nocorrect grunt'
+  alias bower='nocorrect bower'
   alias sudo='nocorrect sudo'
 fi

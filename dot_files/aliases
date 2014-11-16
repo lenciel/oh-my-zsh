@@ -19,7 +19,7 @@ alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory 
 alias tt='tt++ $HOME/.ttconf'
 alias svim="sudo vim" 		# Run vim as super user
 alias rmf="rm -fr"			# Remove with a warning
-alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias f='open -a Finder ./' # Open in Finder
 
 # Python&Django
