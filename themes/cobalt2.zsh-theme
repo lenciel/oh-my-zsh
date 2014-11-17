@@ -32,6 +32,11 @@ SEGMENT_SEPARATOR='⮀'
 battery_charge() {
     echo `python ~/bin/batcharge.py` 2>/dev/null
 }
+
+virtualenv_info() {
+    [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`')'
+}
+
 ## huh dont need this
 collapse_pwd() {
    # echo $(pwd | sed -e "s,^$HOME,~,")
@@ -123,6 +128,7 @@ build_prompt() {
   prompt_dir
   prompt_git
   prompt_end
+  virtualenv_info
 }
 
 PROMPT='%{%f%b%k%}$(build_prompt) '
