@@ -69,5 +69,5 @@ alias pr='post-review -g -o --target-groups "zoom_xerus" --target-people "caixu,
 # local tunnel
 alias lt='/opt/boxen/nodenv/versions/v0.10.21/bin/lt'
 alias ngyawp='ngrok -authtoken 1kCPTQ4hqOf2vbxpgkc2  -subdomain=yawp-lenciel 8000'
-alias fport='sudo lsof -i -P | grep -i "listen 20001"'
+alias fport='sudo lsof -i -P | grep -i "20001"'
 alias slog='tail -f /var/log/system.log'
