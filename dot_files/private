@@ -209,6 +209,7 @@ export PIP_DOWNLOAD_CACHE=~/.pip-download-cache
 source ~/.bin/tmuxinator.zsh
 
 export PATH="/opt/boxen/rbenv/bin:$PATH"
+export DYLD_FALLBACK_LIBRARY_PATH=/opt/boxen/homebrew/Cellar/cairo/1.14.0/lib
 eval "$(rbenv init -)"
 # required for https://github.com/imathis/octopress/issues/144
 #export LC_CTYPE=en_US.UTF-8
