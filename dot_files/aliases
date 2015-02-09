@@ -43,7 +43,7 @@ alias hgo='hg outgoing'
 alias mblog="mux blog"
 alias magent="mux goagent"
 alias kg="tmux kill-session -t goagent"
-
+alias ldd="otool -L"
 # Android
 alias apkd="~/bin/apk2g/apk2gold"
 
@@ -65,6 +65,7 @@ alias bj='autossh -M 20000 -f -i ~/.ssh/fuckgfw -N -L 0.0.0.0:3189:localhost:312
 
 # post-review
 alias pr='post-review -g -o --target-groups "zoom_xerus" --target-people "caixu, lethe3000"'
+alias prd='rbt post -g -o --target-groups "desktop" --target-people "caixu"'
 
 # local tunnel
 alias lt='/opt/boxen/nodenv/versions/v0.10.21/bin/lt'
