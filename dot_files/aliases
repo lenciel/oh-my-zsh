@@ -11,7 +11,7 @@ alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles YES && kill
 alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
 
 # Helpers
-alias grep='grep --color=auto' # Always highlight grep search term
+alias grep='ggrep' # Use gnu grep
 alias ping='ping -c 5'      # Pings with 5 packets, not unlimited
 alias df='df -h'            # Disk free, in gigabytes, not bytes
 alias du='du -h -c'         # Calculate total disk usage for a folder
@@ -37,6 +37,9 @@ alias ffcurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-
 alias hgst='hg status'
 alias hgd='hg diff | $GIT_EDITOR -'
 alias hgo='hg outgoing'
+
+# GIT
+alias gca='git clone --recursive'
 
 # Tmux
 ## start alien64 configuration
@@ -72,3 +75,4 @@ alias ngyawp='ngrok -authtoken 1kCPTQ4hqOf2vbxpgkc2  -subdomain=yawp-lenciel 800
 alias fport='sudo lsof -i -P | grep -i "20001"'
 alias kautossh='pkill -9 autossh'
 alias slog='tail -f /var/log/system.log'
+alias autojumpb='sudo ln -s ~/百度云同步 盘/Backup/autojump/autojump.txt  /Users/lenciel/Library/autojump/autojump.txt'

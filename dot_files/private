@@ -17,7 +17,12 @@ cdf() {
     fi
 }
 
-dls () {
+movtogif() {
+    ffmpeg -i "$1" -vf scale=800:-1 -r 10 -f image2pipe -vcodec ppm - |\
+    convert -delay 5 -layers Optimize -loop 0 - "$2"
+}
+
+dls() {
  # directory LS
  echo `ls -l | grep "^d" | awk '{ print $9 }' | tr -d "/"`
 }
@@ -212,7 +217,8 @@ source ~/.bin/tmuxinator.zsh
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 autoload -U compinit && compinit
 
-export PATH="/opt/boxen/homebrew/opt/go/libexec/bin:/opt/boxen/rbenv/bin:/opt/boxen/homebrew/bin:$HOME/go/bin:$PATH"
+export PATH="/opt/boxen/homebrew/opt/coreutils/libexec/gnubin:/opt/boxen/homebrew/opt/go/libexec/bin:/opt/boxen/rbenv/bin:/opt/boxen/homebrew/bin:$HOME/go/bin:$PATH"
+export MANPATH="/opt/boxen/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
 export GOPATH="$HOME/go"
 eval "$(rbenv init -)"
 # required for https://github.com/imathis/octopress/issues/144
@@ -220,3 +226,5 @@ eval "$(rbenv init -)"
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+export ANDROID_HOME=~/adt-bundle-mac/
