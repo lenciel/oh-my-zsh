@@ -9,6 +9,7 @@ else
   alias mkdir='nocorrect mkdir'
   alias gist='nocorrect gist'
   alias heroku='nocorrect heroku'
+  alias which='nocorrect which'
   alias ebuild='nocorrect ebuild'
   alias hpodder='nocorrect hpodder'
   alias grunt='nocorrect grunt'
