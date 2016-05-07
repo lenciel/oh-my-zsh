@@ -40,11 +40,13 @@ alias hgo='hg outgoing'
 
 # GIT
 alias gca='git clone --recursive'
+alias gsub='git submodule update --init --recursive'
 
 # Tmux
 ## start alien64 configuration
 alias mblog="mux blog"
 alias magent="mux goagent"
+alias magent="mux stf"
 alias kg="tmux kill-session -t goagent"
 alias ldd="otool -L"
 # Android
@@ -68,6 +70,7 @@ alias bj='autossh -M 20000 -f -i ~/.ssh/fuckgfw -N -L 0.0.0.0:3189:localhost:312
 
 # post-review
 alias pr='rbt post -g -o --target-groups "django-all" --target-people "caixu"'
+alias prdev='rbt post -g -o --target-groups "django-all" --target-people "caixu" --tracking-branch=origin/dev'
 
 # local tunnel
 alias lt='/opt/boxen/nodenv/versions/v0.10.21/bin/lt'
