@@ -49,8 +49,6 @@ alias magent="mux goagent"
 alias magent="mux stf"
 alias kg="tmux kill-session -t goagent"
 alias ldd="otool -L"
-# Android
-alias apkd="~/bin/apk2g/apk2gold"
 
 # SSH
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=&gt; Public key copied to pasteboard.\n'";
@@ -81,3 +79,4 @@ alias slog='tail -f /var/log/system.log'
 alias autojumpb='sudo ln -s ~/百度云同步 盘/Backup/autojump/autojump.txt  /Users/lenciel/Library/autojump/autojump.txt'
 alias traceroute='grc /usr/sbin/traceroute'
 alias flushdns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed'
+alias nm='/Users/lenciel/adt-bundle-mac/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-nm'

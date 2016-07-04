@@ -226,7 +226,7 @@ export ANDROID_SDK_ROOT=/Users/lenciel/adt-bundle-mac/sdk/
 export ANDROID_NDK_ROOT=/Users/lenciel/adt-bundle-mac/android-ndk-r10e/
 export NDK_ROOT=/Users/lenciel/adt-bundle-mac/android-ndk-r10e/
 
-export PATH="/usr/local/git/bin:/opt/boxen/homebrew/opt/coreutils/libexec/gnubin:/opt/boxen/homebrew/opt/go/libexec/bin:/opt/boxen/rbenv/bin:/opt/boxen/homebrew/bin:$HOME/go/bin:$ANDROID_SDK_ROOT:$ANDROID_NDK_ROOT:$PATH"
+export PATH="/Users/lenciel/bin/apk2g:/usr/local/git/bin:/opt/boxen/homebrew/opt/coreutils/libexec/gnubin:/opt/boxen/homebrew/opt/go/libexec/bin:/opt/boxen/rbenv/bin:/opt/boxen/homebrew/bin:$HOME/go/bin:$ANDROID_SDK_ROOT:$ANDROID_NDK_ROOT:$PATH"
 export MANPATH="/opt/boxen/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
 export GOPATH="$HOME/go"
 

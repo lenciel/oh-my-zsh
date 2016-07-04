@@ -24,7 +24,7 @@ export ZSH_THEME="cobalt2"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx history virtualenv tmux autojump)
+plugins=(git osx history docker virtualenv tmux autojump)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
