@@ -17,6 +17,7 @@ alias df='df -h'            # Disk free, in gigabytes, not bytes
 alias du='du -h -c'         # Calculate total disk usage for a folder
 alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory $(pwd)."'
 alias tt='tt++ $HOME/.ttconf'
+alias vim="/opt/boxen/homebrew/Cellar/vim/HEAD/bin/vim"
 alias svim="sudo vim" 		# Run vim as super user
 alias rmf="rm -fr"			# Remove with a warning
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
