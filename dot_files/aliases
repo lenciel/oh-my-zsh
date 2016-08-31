@@ -81,3 +81,7 @@ alias autojumpb='sudo ln -s ~/百度云同步 盘/Backup/autojump/autojump.txt  
 alias traceroute='grc /usr/sbin/traceroute'
 alias flushdns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed'
 alias nm='/Users/lenciel/adt-bundle-mac/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-nm'
+
+# cTags
+alias ctags='/opt/boxen/homebrew/Cellar/ctags/5.8_1/bin/ctags'
+alias gentags='ctags -R --exclude=.git --exclude=log *'

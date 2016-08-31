@@ -8,7 +8,7 @@
 
 dir=~/.oh-my-zsh/dot_files
 olddir=~/.oh-my-zsh/dot_files_old             # old dotfiles backup directory
-files="tmux.conf vimrc.local vimrc.local.bundles aliases zshrc private"    # list of files/folders to symlink in homedir
+files="tmux.conf vimrc.local vimrc.bundles.local vimrc.before.local aliases zshrc private"    # list of files/folders to symlink in homedir
 
 ##########
 

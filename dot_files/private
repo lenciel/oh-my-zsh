@@ -226,9 +226,9 @@ export ANDROID_SDK_ROOT=/Users/lenciel/adt-bundle-mac/sdk/
 export ANDROID_NDK_ROOT=/Users/lenciel/adt-bundle-mac/android-ndk-r10e/
 export NDK_ROOT=/Users/lenciel/adt-bundle-mac/android-ndk-r10e/
 
-export PATH="/Users/lenciel/bin/apk2g:/usr/local/git/bin:/opt/boxen/homebrew/opt/coreutils/libexec/gnubin:/opt/boxen/homebrew/opt/go/libexec/bin:/opt/boxen/rbenv/bin:/opt/boxen/homebrew/bin:$ANDROID_SDK_ROOT:$ANDROID_NDK_ROOT:$PATH"
+export GOPATH="$HOME/Projects/go"
 export MANPATH="/opt/boxen/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
-export GOPATH="$HOME/Projects/study/go:$HOME/Projects/go"
+export PATH="$GOPATH/bin:/Users/lenciel/bin/apk2g:/usr/local/git/bin:/opt/boxen/homebrew/opt/coreutils/libexec/gnubin:/opt/boxen/homebrew/opt/go/libexec/bin:/opt/boxen/rbenv/bin:/opt/boxen/homebrew/bin:$ANDROID_SDK_ROOT:$ANDROID_NDK_ROOT:$PATH"
 
 preexec() { echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $1" >> ~/.logs/zsh-history-$(date "+%Y-%m-%d").log; }
 
