@@ -85,3 +85,9 @@ alias nm='/Users/lenciel/adt-bundle-mac/android-ndk-r10e/toolchains/arm-linux-an
 # cTags
 alias ctags='/opt/boxen/homebrew/Cellar/ctags/5.8_1/bin/ctags'
 alias gentags='ctags -R --exclude=.git --exclude=log *'
+
+# proxy
+alias goproxy='export http_proxy=http://127.0.0.1:1080 https_proxy=http://127.0.0.1:1080'
+alias disproxy='unset http_proxy https_proxy'
+alias yd='youtube-dl --proxy socks5://127.0.0.1:1080/'
+

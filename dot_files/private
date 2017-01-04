@@ -1,6 +1,6 @@
 #PATH
 
-PATH="/Users/lenciel/adt-bundle-mac/sdk/tools:/Users/lenciel/adt-bundle-mac/sdk/platform-tools:/Users/lenciel/Library/Python/2.7/bin:/usr/local/bin:usr/local/share/python:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin:/opt/boxen/homebrew/Cellar/r/3.1.0/bin:$PATH"
+PATH="/Users/lenciel/Library/Python/2.7/bin:/usr/local/bin:usr/local/share/python:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin:$PATH"
 
 if [ "`uname`" = "Darwin" ]; then
     compctl -f -x 'p[2]' -s "`/bin/ls -d1 /Applications/*/*.app  /Applications/*.app | sed 's|^.*/\([^/]*\)\.app.*|\\1|;s/ /\\\\ /g'`" -- open
@@ -173,21 +173,21 @@ export KEYTIMEOUT=1
 # export NODE_PATH = "/usr/local/lib/node"
 
 # Add virtualenvwrapper env parameter
-export VIRTUALENV_DISTRIBUTE=true
-VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+#export VIRTUALENV_DISTRIBUTE=true
+#VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+#export WORKON_HOME=$HOME/.virtualenvs
+#source /usr/local/bin/virtualenvwrapper.sh
 
 # For boxen
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+# [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+#source /opt/boxen/homebrew/opt/autoenv/activate.sh
 
 # For autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # For tmuxinator
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+# [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 export EDITOR='vim'
-source /opt/boxen/homebrew/opt/autoenv/activate.sh
 # The use_env call below is a reusable command to activate/create a new Python
 # virtualenv, requiring only a single declarative line of code in your .env files.
 # It only performs an action if the requested virtualenv is not the current one.
@@ -208,27 +208,27 @@ use_env() {
 }
 
 # tmuxinator completion
-source ~/.bin/tmuxinator.zsh
+#source ~/.bin/tmuxinator.zsh
 
 # for autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 autoload -U compinit && compinit
 
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 # required for https://github.com/imathis/octopress/issues/144
-#export LC_CTYPE=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export ANDROID_HOME=~/adt-bundle-mac/
-export ANDROID_SDK_ROOT=/Users/lenciel/adt-bundle-mac/sdk/
-export ANDROID_NDK_ROOT=/Users/lenciel/adt-bundle-mac/android-ndk-r10e/
-export NDK_ROOT=/Users/lenciel/adt-bundle-mac/android-ndk-r10e/
+#export ANDROID_HOME=~/adt-bundle-mac/
+#export ANDROID_SDK_ROOT=/Users/lenciel/adt-bundle-mac/sdk/
+#export ANDROID_NDK_ROOT=/Users/lenciel/adt-bundle-mac/android-ndk-r10e/
+#export NDK_ROOT=/Users/lenciel/adt-bundle-mac/android-ndk-r10e/
 
-export GOPATH="$HOME/Projects/go"
-export MANPATH="/opt/boxen/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
-export PATH="$GOPATH/bin:/Users/lenciel/bin/apk2g:/usr/local/git/bin:/opt/boxen/homebrew/opt/coreutils/libexec/gnubin:/opt/boxen/homebrew/opt/go/libexec/bin:/opt/boxen/rbenv/bin:/opt/boxen/homebrew/bin:$ANDROID_SDK_ROOT:$ANDROID_NDK_ROOT:$PATH"
+#export GOPATH="$HOME/Projects/go"
+#export MANPATH="/opt/boxen/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
+#export PATH="$GOPATH/bin:/Users/lenciel/bin/apk2g:/usr/local/git/bin:/opt/boxen/homebrew/opt/coreutils/libexec/gnubin:/opt/boxen/homebrew/opt/go/libexec/bin:/opt/boxen/rbenv/bin:/opt/boxen/homebrew/bin:$ANDROID_SDK_ROOT:$ANDROID_NDK_ROOT:$PATH"
 
 preexec() { echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $1" >> ~/.logs/zsh-history-$(date "+%Y-%m-%d").log; }
 
