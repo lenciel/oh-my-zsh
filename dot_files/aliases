@@ -4,7 +4,7 @@ alias ...='cd ../..'        # Go up two directories
 alias ....='cd ../../..'    # And for good measure
 alias l='ls -lah'           # Long view, show hidden
 alias la='ls -AF'           # Compact view, show hidden
-alias ll='ls -lFh'          # Long view, no hidden
+alias ll='ls -lFh | /Users/lenciel/bin/colorize.py -c green,blue,red,yellow'          # Long view, no hidden
 
 # Mac Helpers
 alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
@@ -44,6 +44,9 @@ alias gca='git clone --recursive'
 alias gsub='git submodule update --init --recursive'
 
 # Tmux
+## attach to machines
+alias avm1='ssh hcb.vm1 -t "tmux -CC attach"'
+
 ## start alien64 configuration
 alias mblog="mux blog"
 alias magent="mux goagent"
@@ -60,6 +63,8 @@ alias mou="open -a Mou.app"
 # Speedtest
 alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 alias pserve='python -m SimpleHTTPServer'
+
+alias ehosts='sudo vi /private/etc/hosts'
 
 alias t='trash'
 alias bb='autossh -M 20000 -f -i ~/.ssh/fuckgfw -N -L 0.0.0.0:3189:localhost:31280 bee@o.badbee.cc'
@@ -90,4 +95,4 @@ alias gentags='ctags -R --exclude=.git --exclude=log *'
 alias goproxy='export http_proxy=http://127.0.0.1:1080 https_proxy=http://127.0.0.1:1080'
 alias disproxy='unset http_proxy https_proxy'
 alias yd='youtube-dl --proxy socks5://127.0.0.1:1080/'
-
+alias ydd='youtube-dl --proxy socks5://192.168.1.28:1080/'
