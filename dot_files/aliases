@@ -46,6 +46,8 @@ alias gsub='git submodule update --init --recursive'
 # Tmux
 ## attach to machines
 alias avm1='ssh hcb.vm1 -t "tmux -CC attach"'
+alias ajira='ssh hcb.jira -t "tmux -CC attach"'
+alias aconf='ssh hcb.confluence -t "tmux -CC attach"'
 
 ## start alien64 configuration
 alias mblog="mux blog"
@@ -96,3 +98,4 @@ alias goproxy='export http_proxy=http://127.0.0.1:1080 https_proxy=http://127.0.
 alias disproxy='unset http_proxy https_proxy'
 alias yd='youtube-dl --proxy socks5://127.0.0.1:1080/'
 alias ydd='youtube-dl --proxy socks5://192.168.1.28:1080/'
+alias aria='aria2c --conf-path="/Users/lenciel/.aria2/aria2.conf" -D'
