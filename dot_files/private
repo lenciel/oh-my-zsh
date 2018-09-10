@@ -214,7 +214,7 @@ use_env() {
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 autoload -U compinit && compinit
 
-#eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 # required for https://github.com/imathis/octopress/issues/144
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -232,3 +232,4 @@ export LC_ALL=en_US.UTF-8
 
 preexec() { echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $1" >> ~/.logs/zsh-history-$(date "+%Y-%m-%d").log; }
 
+export PATH="/usr/local/opt/gettext/bin:$PATH"
