@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 locals.zsh
 log/.zsh_history
 projects.zsh
@@ -7,16 +6,9 @@ vim/
 !custom/example
 !custom/example.zsh
 *.swp
-dot_files_old/.aliases
-dot_files_old/.zshrc
+dot_files_old
 !custom/example.zshcache
-=======
-# custom files
-custom/
-!custom/plugins/example
-!custom/example.zsh
-
+.DS*
 # temp files directories
->>>>>>> 982e14cd3ac33951efd288c917f17ff6439951ab
 cache/
 log/
