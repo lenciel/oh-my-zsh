@@ -30,7 +30,7 @@ SEGMENT_SEPARATOR=''
 
 
 battery_charge() {
-    echo `python ~/bin/batcharge.py` 2>/dev/null
+    echo `python ~/.oh-my-zsh/scripts/batcharge.py` 2>/dev/null
 }
 
 virtualenv_info() {
